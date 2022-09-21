@@ -1,5 +1,24 @@
 # code-with-quarkus Project
 
+## Tema do projett
+
+Sistema de Controle de Estoque de Produtos
+
+## Funcionalidades
+
+- Criação de Produto
+- Edição de Produto
+- Deleção de Produto
+- Listagem de produtos
+- Listagem de produtos filtrados por categoria
+- Criação de Categoria
+- Edição de Categoria
+- Listagem de Categorias
+
+## Diagrama de Entidades
+
+![Diagrama](/.docs/dia.png "MarineGEO logo")
+## DOCUMENTAÇÃO AUTOMATICA
 This project uses Quarkus, the Supersonic Subatomic Java Framework.
 
 If you want to learn more about Quarkus, please visit its website: https://quarkus.io/ .
