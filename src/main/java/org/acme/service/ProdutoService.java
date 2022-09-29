@@ -24,6 +24,13 @@ public class ProdutoService {
         return prod;
     }
 
+    public Produto deletarProduto(int id) throws Exception {
+        return new Produto();
+    }
+
+    public List<Produto> listarTodosProdutosPorCategoria(int categoriaId) {
+        return new ArrayList<>();
+    }
 
 
     private void validaProduto(Produto prod) throws Exception {

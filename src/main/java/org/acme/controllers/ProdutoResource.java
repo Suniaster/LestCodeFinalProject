@@ -42,8 +42,8 @@ public class ProdutoResource {
 
     @DELETE
     @Path("/{id}")
-    public Response deletar(final @PathParam("id") int id ) {
-        return Response.ok().build();
+    public Response deletar(final @PathParam("id") int id ) throws Exception {
+        return Response.status(Response.Status.CREATED).entity(service.deletarProduto(id)).build();
     }
 
     @POST
@@ -53,7 +53,7 @@ public class ProdutoResource {
 
     @GET
     @Path("/categoria/{categoria_id}")
-    public Response listarPorCategoria(final @PathParam("categoria_id") int id){
-        return Response.ok().build();
+    public Response listarPorCategoria(final @PathParam("categoria_id") int id) throws Exception{
+        return Response.status(Response.Status.CREATED).entity(service.listarTodosProdutosPorCategoria(id)).build();
     }
 }
