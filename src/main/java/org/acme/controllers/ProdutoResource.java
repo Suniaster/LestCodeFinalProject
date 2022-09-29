@@ -1,6 +1,9 @@
-package org.acme;
+package org.acme.controllers;
 
+import java.util.ArrayList;
+import java.util.List;
 import javax.enterprise.context.RequestScoped;
+import javax.inject.Inject;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
@@ -10,6 +13,8 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import org.acme.models.Produto;
+import org.acme.service.ProdutoService;
 
 @Path("/produto")
 @Consumes(MediaType.APPLICATION_JSON + ";charset=utf-8")
@@ -17,9 +22,12 @@ import javax.ws.rs.core.Response;
 @RequestScoped
 public class ProdutoResource {
 
+    @Inject
+    ProdutoService service;
+
     @GET
-    public Response listar() {
-        return Response.ok().build();
+    public List<Produto> listar() {
+        return service.listarTodosProdutos();
     }
 
     @PUT
