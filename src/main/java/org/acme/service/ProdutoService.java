@@ -14,4 +14,9 @@ public class ProdutoService {
     }
 
 
+    public Produto editarProdutoPorId(int id, Produto prod){
+
+
+        return prod;
+    }
 }

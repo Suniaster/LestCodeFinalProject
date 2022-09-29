@@ -1,5 +1,6 @@
 package org.acme.models;
 
+
 public class Produto {
     private String nome;
     private int quantidadeEstoque;
