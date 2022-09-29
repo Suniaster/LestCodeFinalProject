@@ -41,7 +41,8 @@ public class ProdutoResource {
     }
 
     @DELETE
-    public Response deletar() {
+    @Path("/{id}")
+    public Response deletar(final @PathParam("id") int id ) {
         return Response.ok().build();
     }
 
@@ -51,8 +52,8 @@ public class ProdutoResource {
     }
 
     @GET
-    @Path("/categoria")
-    public Response listarPorCategoria(){
+    @Path("/categoria/{categoria_id}")
+    public Response listarPorCategoria(final @PathParam("categoria_id") int id){
         return Response.ok().build();
     }
 }
