@@ -32,8 +32,12 @@ public class ProdutoResource {
     }
 
     @PUT
-    public Produto editar(Produto prod) {
-        return service.editarProdutoPorId(1, prod);
+    public Response editar(Produto prod) throws Exception  {
+        return Response
+            .status(Response.Status.CREATED)
+            .entity(service.editarProdutoPorId(prod))
+            .build()
+        ;
     }
 
     @DELETE
@@ -42,8 +46,8 @@ public class ProdutoResource {
     }
 
     @POST
-    public Response criar() {
-        return Response.ok().build();
+    public Response criar(Produto prod) throws Exception {
+        return Response.status(Response.Status.CREATED).entity(service.criarProduto(prod)).build();
     }
 
     @GET
